@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 asdffdsafas
+=======
+123456dasd1sa321
+>>>>>>> change_site
+123456dasd1sa321
