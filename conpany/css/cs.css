@@ -1,0 +1,71 @@
+ *{margin:0px;padding:0px;}
+ /*头部样式*/
+ #top{width:410px;height:40px;margin:0 auto;}
+ body{background:#f0f0f0;}
+ #to_left{float:left;}
+ #top_right{float:right;margin-top:20px;margin-right:15px;}
+ li{float:left;list-style:none;margin:0px 5px; padding-bottom:15px;}
+ li a{text-decoration:none;color:#000;}
+ li a:hover{color:red;}
+ #cnt{width:410px;margin:0 auto;}
+
+ /*首页内容部分样式*/
+ .dv{width:410px;border:1px solid #ccc;margin:0 auto;margin-top:30px;background:#e0e0e0}
+ .dv1{width:90px;height:50px;margin:0 auto;line-height:50px;background:#f0f0f0;
+ text-align:center;margin-top:-28px;font-weight:bold;}
+ .content{width:410px;text-align:center;font-size:12px;margin:0 auto;line-height:25px;}
+ .product{width:410px;height:120px;margin:0 auto; border:1px dashed red;margin-bottom: 3px;}
+ .product_1{width:80px;height:90px;float:left;margin-left:5px;margin-top:18px;padding-left:12px;
+ 			}
+ 			img{border:1px solid red;}
+ .info{width:410px;height:250px;background:#eee;margin:0 auto; }
+ .info_left{width:200px;height:100%;border:1px dashed olive;}
+ .info_left h3{padding-top:15px;margin-left:15px;}
+ .info_left p{padding-left:15px;margin-top:8px;text-indent:2em;line-height:25px;float:left;}
+ .info_right{width:200px;height:100%;float:right;border:1px dashed olive;}
+ .info_right h3{padding-top:15px;margin-left:15px;}
+ .info_right div{padding-left:15px;margin-top:8px;padding-top:10px;}
+ .info_right span{float:right;margin-right:15px;}
+ /*底部样式*/
+ .but{width:410px;height:65px;margin:0 auto;text-align:center;background:#999;
+ padding-top:8px;margin-top:5px;border-radius: 10px;}
+ /*	about的样式*/
+ #about{float: left;width: 400px;clear: both;}
+ .about_cnt{width: 410px; height:450px;margin: 0 auto; border-radius:10px;border:1px dashed red;background: #e0e0ee}
+ .about_cnt_left{width:120px;height:300px;float:left;margin-top:10px;float: left}
+ .img{width: 100px;height: 70px;border: 1px solid #999; margin-top: 25px; margin-left: 4px}
+ .img:fitst-child{margin-top: 5px;}
+ .about_cnt_right{ width: 280px;height: 300px; float: right; margin-top:1;margin-right: 5px}
+.title{width: 100%; height:30px;margin-top: 6px;margin-left: 5px;font-weight: bold}
+.cont{text-indent: 2em;line-height: 25px;}
+
+/*news 样式*/
+.new_con{width: 410px;height: 500px;margin: 0 auto;border-radius: 20px;
+		 border:1px dashed red ;background: #e0e0ee;
+		}
+.new_but{}
+.new_top{margin-left: 5px;margin-top: 2px;font-weight: bold;padding-top: 15px}
+.new_notice{width: 195px;height: 400px;position: absolute;float: left;margin-top: 10px;margin-left: 5px;
+			border:1px dashed red;background:white;}
+.new_news{width: 195px;height: 400px;float: right; margin-top: 10px;margin-right: 5px;
+			border:1px dashed red;background:white;}
+new_title{font-weight: bold;margin-left: 5px;}
+.notice{margin-left: 20px;margin-right: 20px;font-weight: bold}
+.notice span{float: right; margin-right: 20px;font-weight: normal}
+/*product样式*/
+.product_c{width: 400px;height: 500px;margin: 0 auto;background: #e0e0ee}
+.product_top{margin-left: 5px;margin-top: 2px;font-weight: bold;padding-top: 15px;}
+.product_cnt{width: 410px;height: 450px;margin-top: 10px;margin-left: 14px}
+.pro{width: 100px;height: 90px;margin-left:19px;margin-top: 30px;border:1px solid white;float: left}
+.page{float:left;margin-top: 30px;margin-left: 95px;
+	}
+/*contact样式*/
+.contact{width: 410px;height: 500px;margin: 0 auto;background: #e0e0ee}
+.contact_top{margin-left: 5px;margin-top: 2px;font-weight: bold;padding-top: 15px}
+.contact_left{width: 200px;height: 450px;position: absolute;float: left;border-radius: 20px;margin: 5px 0px 0px 10px;}
+.contact_right{width: 150px;height: 450px;float:right;margin:10px 5px 0 0;}
+.online{font-weight: bold;color: red;margin-top:15px;}
+.weixin{width: 200px height: 250px;}
+.weixin img{border:1px solid red;margin-top:10px}
+.service{width: 200px height: 250px;}
+.service img{width: 200px height: 25px;margin-top:10px}
