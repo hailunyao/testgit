@@ -279,8 +279,8 @@ INSERT INTO `deepcate` ( `pid`, `catename`, `cateorder`, `createtime`) VALUES
 ( 10, '英国电影', 0, 0),
 ( 6, '英国电影', 0, 0)
 
-create database db_compary
-DROP database db_compary
+create database db_compary;
+DROP database db_compary;
 CREATE DATABASE IF NOT EXISTS db_compary DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
 
 use db_compary
@@ -292,7 +292,7 @@ lasttime datetime not null,
 createtime datetime not null,
 counname int,
 PRIMARY KEY (id)
-)DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci
+)DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 create table about(
 id int not null AUTO_INCREMENT,
@@ -300,14 +300,50 @@ title varchar(30) not null,
 content varchar(300) not null,
 createtime datetime,
 PRIMARY key(id)
-)DEFAULT CHARacter SET utf8 COLLATE utf8_general_ci
+)DEFAULT CHARacter SET utf8 COLLATE utf8_general_ci;
 
 create table contact(
 id int  not null AUTO_increment,
-site varvahr(30) not null,
+site varchar(30) not null,
 tel varchar(15) not null,
-suppot varchar(15) not null
-)
+suppot varchar(15) not null,
+nexttel varchar(15) not null,
+fax varchar(15) not null,
+home varchar(15) not null,
+email varchar(15) not null,
+PRIMARY KEY(id)
+)DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+create table news(
+id int not null AUTO_INCREMENT,
+type varchar(15) not null,
+title varchar(32) not null,
+content varchar(300)not null,
+newtime datetime not null,
+counts int not null,
+PRIMARY KEY(id)
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+CREATE TABLE product(
+id int not null AUTO_INCREMENT,
+title varchar(32) not null,
+imgname varchar(50) not null,
+price varchar(20) not null,
+content varchar(300) not null,
+goodtiem datetime not null,
+PRIMARY KEY(id)
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+create table manu(
+id int not null auto_increment,
+pid int not null,
+cid int not null,
+title varchar(10) not null,
+link varchar(30),
+upback varchar(120),
+PRIMARY KEY(id)
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
 
 
 

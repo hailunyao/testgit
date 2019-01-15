@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	  <script type="text/javascript">
+        function unique(arr){
+// 遍历arr，把元素分别放入tmp数组(不存在才放)
+            var tmp = new Array();
+            for(var i in arr){
+//该元素在tmp内部不存在才允许追加
+                if(tmp.indexOf(arr[i])==-1){
+                    tmp.push(arr[i]);
+                }
+            }
+            return tmp;
+        }
+       alert(unique(['qiang','ming','tao','li','liang','you','qiang','tao']));
+    </script>
+--------------------- 
+作者：mischen520 
+来源：CSDN 
+原文：https://blog.csdn.net/miachen520/article/details/52051253 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+</body>
+</html>

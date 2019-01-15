@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	body{background: yellow};
+	.txt_result{
+		background: green;
+		border-style: 1px solid black;
+		color: white;
+		font-weight: bold;
+		height: 20px;
+	}
+</style>
+
+<body>
+	<form action="" onsubmit="return(main());">
+		<h3>请输入要计算的四个数</h3>
+		<p><input type="text" id="v1" onchange="check1(this);"></p>
+		<p><p><input type="text" id="v2" onchange="check1(this);"></p>
+		<p><input type="text" id="v3" onchange="check1(this);"></p>
+		<p><input type="text" id="v4" onchange="check1(this);"></p>
+		<b>请输入要计算的结果</b>
+		<input type="text" id="v5" onchange="check1(this) " value="24">
+		<input type="submit" value="计算">
+		<input type="reset" onclick="clear_input()" value="清除">
+	</form>
+	<b>结果</b><br>
+	<div id="txt_result" class="txt_result"></div>
+	<script>
+	var v1,v2,v3,v4,v5,txt_result;
+	function $(str){return(document.getElementById(str));}
+	function call(val1,val2,val3,val4){
+		thearray0=new Array(val1,val2,val3,val4);
+		thearray1=new Array('1234','1243','1324','1342','1432','1423','2134','2143','2314','2341','2431','2413','3124','3142','3412','3421','3214','3241','4123','4132','4312','4321','4213','4231');
+		thearray2=new Array('+','-','*','/');
+		var a1=parseInt(v5.value);
+		var s1='';
+		for (var i = 0; i < 24; i++) {
+			thearray3=thearray1[i].split("");
+			for (var m = 0; m < 4; m++) {
+				thearray3[m]=parseInt(thearray3[m]);
+			}
+			for (var j= 0; j < 4; j++) {
+				for (var k = 0; k<4; k++) {
+					for (var l = 0; l < 4; l++) {
+						ss1=thearray0[thearray3[0]-1]+thearray2[j]+thearray0[thearray3[1]-1]+thearray2[k]+thearray0[thearray3[2]-1]+thearray2[l]+thearray0[thearray3[3]-1];
+					// if (eval(ss1)==a1){return(ssl)}
+					if (eval(ss1)==a1){s1+=ss1+'\n'}
+						ssl='('+thearray0[thearray3[0]-1]+thearray2[j]+thearray0[thearray3[1]-1]+')'+thearray2[k]+thearray0[thearray3[2]-1]+thearray2[l]+thearray0[thearray3[3]-1];
+					if (eval(ss1)==a1){s1+=ss1+'\n'}
+						ssl=thearray0[thearray3[0]-1]+thearray2[j]+thearray0[thearray3[1]-1]+thearray2[k]+'('+thearray0[thearray3[2]-1]+thearray2[l]+thearray0[thearray3[3]-1]+')';
+						if (eval(ss1)==a1){s1+=ss1+'\n'}
+						ssl=thearray0[thearray3[0]-1]+thearray2[j]+'('+thearray0[thearray3[1]-1]+thearray2[k]+thearray0[thearray3[2]-1]+')'+thearray2[l]+thearray0[thearray3[3]-1];
+						if (eval(ss1)==a1){s1+=ss1+'\n'}
+						ssl='('+thearray0[thearray3[0]-1]+thearray2[j]+thearray0[thearray3[1]-1]+thearray2[k]+thearray0[thearray3[2]-1]+')'+thearray2[l]+thearray0[thearray3[3]-1];
+						if (eval(ss1)==a1){s1+=ss1+'\n'}
+						ssl=thearray0[thearray3[0]-1]+thearray2[j]+'('+thearray0[thearray3[1]-1]+thearray2[k]+thearray0[thearray3[2]-1]+thearray2[l]+thearray0[thearray3[3]-1]+')';
+					if (eval(ss1)==a1){s1+=ss1+'\n'}
+						ssl='('+thearray0[thearray3[0]-1]+thearray2[j]+thearray0[thearray3[1]-1]+')'+thearray2[k]+'('+thearray0[thearray3[2]-1]+thearray2[l]+thearray0[thearray3[3]-1]+')';
+						if (eval(ss1)==a1){s1+=ss1+'\n'}
+					}
+				}
+			}
+		
+		}
+	return(s1);
+	return (false);
+	}
+	function main(){
+		var s1=call(v1.value,v2.value,v3.value,v4.value);
+		if (s1) {
+			var s2=s1.replace(/\n/g,',');
+			var s3=s2.split(",");
+			
+		
+				var tmp=new Array();
+				for (var i in s3){
+					if (tmp.indexOf(s3[i])==-1) {
+						tmp.push(s3[i]);
+					}
+				}
+		var s4=tmp.length;
+		var a1=tmp.join();
+		var a2=a1.replace('/,/g','\n');
+		alert(a2);
+			txt_result.innerText+='\n'+s4,tmp+'=='+v5.value;
+
+		}else{
+			txt_result.innerText+='\n'+v1.value+','+v2.value+','+v3.value+','+v4.value+'无结果！';
+		}
+
+	return (false);
+	}
+	init()
+function init(){
+	v1=$("v1");
+ 	v2=$("v2");
+ 	v3=$("v3");
+ 	v4=$("v4");
+ 	v5=$("v5");
+ 	txt_result=$('txt_result');	
+ 	v1.select();		
+	}
+ function check1(obj1){
+ 	if (isNaN(obj1.value)) {
+ 		alert('请输入一个数值！');
+ 		obj1.focus();
+ 		obj1.select();
+ 		event.returnValue=false;
+ 		event.cencelBubble=true;
+ 	return (false);
+ 	}
+ }
+ function clear_input(){
+ 	txt_result.innerText="";
+ 	v1.focus();
+ 	return true;
+ }
+</script>
+</body>
+</html>
